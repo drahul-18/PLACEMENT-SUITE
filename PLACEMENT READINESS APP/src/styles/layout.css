@@ -1,0 +1,136 @@
+/**
+ * KodNest Premium Build System — Layout Structure
+ * [Top Bar] → [Context Header] → [Primary Workspace + Secondary Panel] → [Proof Footer]
+ */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── TOP BAR ─── */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topbar-height);
+  padding: 0 var(--space-4);
+  background: var(--color-input-bg);
+  border-bottom: var(--border);
+}
+
+.top-bar__left {
+  font-family: var(--font-heading);
+  font-size: var(--text-heading-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.top-bar__center {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+}
+
+.top-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+/* ─── CONTEXT HEADER ─── */
+.context-header {
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border-bottom: var(--border);
+}
+
+.context-header h1 {
+  margin-bottom: var(--space-1);
+}
+
+.context-header__subtext {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+}
+
+/* ─── MAIN CONTENT AREA ─── */
+.main-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* ─── PRIMARY WORKSPACE (70%) ─── */
+.primary-workspace {
+  flex: 0 0 var(--workspace-width);
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+
+/* ─── SECONDARY PANEL (30%) ─── */
+.secondary-panel {
+  flex: 0 0 var(--panel-width);
+  padding: var(--space-4);
+  background: var(--color-input-bg);
+  border-left: var(--border);
+  overflow-y: auto;
+}
+
+.secondary-panel__section {
+  margin-bottom: var(--space-4);
+}
+
+.secondary-panel__section:last-child {
+  margin-bottom: 0;
+}
+
+.secondary-panel__label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.secondary-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+/* ─── PROOF FOOTER ─── */
+.proof-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-input-bg);
+  border-top: var(--border);
+  min-height: var(--footer-height);
+}
+
+.proof-footer__checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .primary-workspace {
+    flex: 1 1 auto;
+  }
+
+  .secondary-panel {
+    flex: 1 1 auto;
+    border-left: none;
+    border-top: var(--border);
+  }
+}

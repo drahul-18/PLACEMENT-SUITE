@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Notification Tracker</title>
+  <link rel="stylesheet" href="design-system/index.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="kn-app kn-app--shell">
+  <header class="kn-nav">
+    <a href="#/" class="kn-nav__brand">Job Notification Tracker</a>
+    <button type="button" class="kn-nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="kn-nav__toggle-bar"></span>
+      <span class="kn-nav__toggle-bar"></span>
+      <span class="kn-nav__toggle-bar"></span>
+    </button>
+    <nav class="kn-nav__links">
+      <a href="#/dashboard" class="kn-nav__link" data-route="dashboard">Dashboard</a>
+      <a href="#/saved" class="kn-nav__link" data-route="saved">Saved</a>
+      <a href="#/digest" class="kn-nav__link" data-route="digest">Digest</a>
+      <a href="#/settings" class="kn-nav__link" data-route="settings">Settings</a>
+      <a href="#/jt/proof" class="kn-nav__link" data-route="jt/proof">Proof</a>
+      <a href="#/jt/07-test" class="kn-nav__link" data-route="jt/07-test">Test</a>
+      <a href="#/jt/08-ship" class="kn-nav__link kn-nav__link--ship" data-route="jt/08-ship">Ship</a>
+    </nav>
+  </header>
+
+  <main class="kn-main kn-main--page">
+    <section class="kn-page" id="page-content"></section>
+  </main>
+
+  <div id="modal-backdrop" class="kn-modal-backdrop" aria-hidden="true"></div>
+  <div id="modal" class="kn-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="kn-modal__content">
+      <h2 id="modal-title" class="kn-modal__title"></h2>
+      <p class="kn-modal__company"></p>
+      <div class="kn-modal__skills"></div>
+      <p class="kn-modal__description"></p>
+      <button type="button" class="kn-btn kn-btn--secondary kn-modal__close">Close</button>
+    </div>
+  </div>
+
+  <script src="data/jobs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
