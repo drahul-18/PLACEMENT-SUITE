@@ -1,0 +1,43 @@
+/**
+ * Placement Suite — Design Tokens
+ * Calm, Intentional, Coherent, Confident
+ */
+
+:root {
+  --kn-color-bg: #F7F6F3;
+  --kn-color-text: #111111;
+  --kn-color-accent: #8B0000;
+  --kn-color-success: #4A6B4A;
+  --kn-color-warning: #8B7355;
+  --kn-color-primary: var(--kn-color-accent);
+  --kn-color-border: rgba(17, 17, 17, 0.12);
+  --kn-color-border-focus: var(--kn-color-accent);
+  --kn-color-muted: rgba(17, 17, 17, 0.6);
+  --kn-font-serif: "Libre Baskerville", "Georgia", "Times New Roman", serif;
+  --kn-font-sans: "DM Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --kn-font-size-h1: 2.5rem;
+  --kn-font-size-h2: 2rem;
+  --kn-font-size-h3: 1.5rem;
+  --kn-font-size-h4: 1.25rem;
+  --kn-font-size-body: 1rem;
+  --kn-font-size-body-lg: 1.125rem;
+  --kn-line-height-body: 1.65;
+  --kn-line-height-heading: 1.3;
+  --kn-text-max-width: 720px;
+  --kn-space-xs: 8px;
+  --kn-space-sm: 16px;
+  --kn-space-md: 24px;
+  --kn-space-lg: 40px;
+  --kn-space-xl: 64px;
+  --kn-radius: 6px;
+  --kn-border-width: 1px;
+  --kn-transition: 175ms ease-in-out;
+  --kn-topbar-height: 56px;
+  --kn-card-border: 1px solid var(--kn-color-border);
+  --kn-border-width: 1px;
+  --kn-btn-height: 40px;
+  --kn-btn-padding-x: 16px;
+  --kn-input-height: 44px;
+  --kn-input-padding: 16px;
+  --kn-card-padding: 24px;
+}
